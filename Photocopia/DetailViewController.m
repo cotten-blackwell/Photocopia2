@@ -44,16 +44,16 @@
     [self.animator addBehavior:snap];
 }
 
-//-(void)viewDidLayoutSubviews {
-//    [super viewDidLayoutSubviews];
-//
-//    CGSize size = self.view.bounds.size;
-//    CGSize imageSize = CGSizeMake(size.width, size.height);
-//
-//    self.imageView.frame = CGRectMake(0.0, (size.height - imageSize.height)/2.0, imageSize.width, imageSize.height);
-//
-//}
-//
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    CGSize size = self.view.bounds.size;
+    CGSize imageSize = CGSizeMake(size.width, size.height);
+
+    self.imageView.frame = CGRectMake(0.0, (size.height - imageSize.height)/2.0, imageSize.width, imageSize.height);
+
+}
+
 
 -(void)close {
     [self.animator removeAllBehaviors];

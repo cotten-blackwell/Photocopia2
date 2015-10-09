@@ -104,7 +104,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *photo = self.photos[indexPath.row];
-    THDetailViewController *viewController = [[THDetailViewController alloc] init];
+    DetailViewController *viewController = [[DetailViewController alloc] init];
     viewController.modalPresentationStyle = UIModalPresentationCustom;
     viewController.transitioningDelegate = self;
     viewController.photo = photo;
@@ -113,11 +113,11 @@
 }
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    return [[THPresentDetailTransition alloc] init];
+    return [[PresentDetailTransition alloc] init];
 }
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return [[THDismissDetailTransition alloc] init];
+    return [[DismissDetailTransition alloc] init];
 }
 
 

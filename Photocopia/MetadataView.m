@@ -9,7 +9,8 @@
 #import "MetadataView.h"
 #import "PhotoController.h"
 
-#import <SAMCategories/NSDate+SAMAdditions.h>
+//#import <SAMCategories/NSDate+SAMAdditions.h>
+#import "NSDate+SAMAdditions.h"
 
 @interface MetadataView ()
 @property (nonatomic) UIImageView *avatarImageView;
