@@ -12,6 +12,7 @@
 #import "PresentDetailTransition.h"
 #import "DismissDetailTransition.h"
 
+#import <SimpleAuth/SimpleAuth.h>
 
 @interface PhotosViewController () <UIViewControllerTransitioningDelegate>
 
@@ -69,7 +70,8 @@
 
 -(void)refresh {
     NSURLSession *session = [NSURLSession sharedSession];
-    NSString *urlString = [[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/tags/snow/media/recent?access_token=%@", self.accessToken];
+//    NSString *urlString = [[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/tags/snow/media/recent?access_token=%@", self.accessToken];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/tags/photobomb/media/recent?access_token=%@", self.accessToken];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {

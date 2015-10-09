@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5757EA6A3FF50D609ECAA6F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8ECC297A5BBF8157055226 /* libPods.a */; };
+		5C27086C1BC868BE007D2FE5 /* SAMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C27086B1BC868BE007D2FE5 /* SAMCache.m */; settings = {ASSET_TAGS = (); }; };
+		5C27086D1BC868BE007D2FE5 /* SAMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C27086B1BC868BE007D2FE5 /* SAMCache.m */; settings = {ASSET_TAGS = (); }; };
+		5C27086E1BC868BE007D2FE5 /* SAMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C27086B1BC868BE007D2FE5 /* SAMCache.m */; settings = {ASSET_TAGS = (); }; };
+		5C2708731BC869CB007D2FE5 /* SAMCache+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2708711BC869CB007D2FE5 /* SAMCache+Image.m */; settings = {ASSET_TAGS = (); }; };
+		5C2708741BC869CB007D2FE5 /* SAMCache+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2708711BC869CB007D2FE5 /* SAMCache+Image.m */; settings = {ASSET_TAGS = (); }; };
+		5C2708751BC869CB007D2FE5 /* SAMCache+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2708711BC869CB007D2FE5 /* SAMCache+Image.m */; settings = {ASSET_TAGS = (); }; };
 		5C6370CD1BBC7164000B7177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6370CC1BBC7164000B7177 /* main.m */; };
 		5C6370D01BBC7164000B7177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6370CF1BBC7164000B7177 /* AppDelegate.m */; };
 		5C6370D81BBC7164000B7177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6370D71BBC7164000B7177 /* Assets.xcassets */; };
@@ -59,6 +65,11 @@
 /* Begin PBXFileReference section */
 		1023BE625EB99A2B19DFFF70 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5C12E18B1BC83AAE0098CE03 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		5C27086A1BC868BE007D2FE5 /* SAMCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAMCache.h; path = Photocopia/SAMCache.h; sourceTree = "<group>"; };
+		5C27086B1BC868BE007D2FE5 /* SAMCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAMCache.m; path = Photocopia/SAMCache.m; sourceTree = "<group>"; };
+		5C2708701BC869CB007D2FE5 /* SAMCache+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMCache+Image.h"; sourceTree = "<group>"; };
+		5C2708711BC869CB007D2FE5 /* SAMCache+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAMCache+Image.m"; sourceTree = "<group>"; };
+		5C2708721BC869CB007D2FE5 /* SAMCache+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMCache+Private.h"; sourceTree = "<group>"; };
 		5C6370C81BBC7164000B7177 /* Photocopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photocopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6370CC1BBC7164000B7177 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C6370CE1BBC7164000B7177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,16 +142,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C27086F1BC869AE007D2FE5 /* SAMCache */ = {
+			isa = PBXGroup;
+			children = (
+				5C2708701BC869CB007D2FE5 /* SAMCache+Image.h */,
+				5C2708711BC869CB007D2FE5 /* SAMCache+Image.m */,
+				5C2708721BC869CB007D2FE5 /* SAMCache+Private.h */,
+				5C27086A1BC868BE007D2FE5 /* SAMCache.h */,
+				5C27086B1BC868BE007D2FE5 /* SAMCache.m */,
+			);
+			name = SAMCache;
+			sourceTree = "<group>";
+		};
 		5C6370BF1BBC7164000B7177 = {
 			isa = PBXGroup;
 			children = (
-				5C12E18B1BC83AAE0098CE03 /* Podfile */,
-				5C6370CA1BBC7164000B7177 /* Photocopia */,
 				5C63710A1BBC74CD000B7177 /* Frameworks */,
+				5C6370CA1BBC7164000B7177 /* Photocopia */,
 				5C6370E41BBC7164000B7177 /* PhotocopiaTests */,
 				5C6370EF1BBC7164000B7177 /* PhotocopiaUITests */,
-				5C6370C91BBC7164000B7177 /* Products */,
+				5C12E18B1BC83AAE0098CE03 /* Podfile */,
 				0A3BDB7AC160776399F84211 /* Pods */,
+				5C6370C91BBC7164000B7177 /* Products */,
+				5C27086F1BC869AE007D2FE5 /* SAMCache */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +189,8 @@
 				5C6371031BBC7415000B7177 /* DismissDetailTransition.h */,
 				5C6371041BBC7415000B7177 /* DismissDetailTransition.m */,
 				5C6370DC1BBC7164000B7177 /* Info.plist */,
+				5C6371281BBC7BC6000B7177 /* MetadataView.h */,
+				5C6371291BBC7BC6000B7177 /* MetadataView.m */,
 				5C6371141BBC75ED000B7177 /* PhotoCell.h */,
 				5C6371151BBC75ED000B7177 /* PhotoCell.m */,
 				5C6371191BBC7685000B7177 /* PhotoController.h */,
@@ -174,8 +200,6 @@
 				5C6371231BBC77D1000B7177 /* PresentDetailTransition.h */,
 				5C6371241BBC77D1000B7177 /* PresentDetailTransition.m */,
 				5C6370CB1BBC7164000B7177 /* Supporting Files */,
-				5C6371281BBC7BC6000B7177 /* MetadataView.h */,
-				5C6371291BBC7BC6000B7177 /* MetadataView.m */,
 			);
 			path = Photocopia;
 			sourceTree = "<group>";
@@ -391,7 +415,9 @@
 				5C6371251BBC77D1000B7177 /* PresentDetailTransition.m in Sources */,
 				5C6371201BBC7712000B7177 /* PhotosViewController.m in Sources */,
 				5C6370CD1BBC7164000B7177 /* main.m in Sources */,
+				5C2708731BC869CB007D2FE5 /* SAMCache+Image.m in Sources */,
 				5C6371051BBC7415000B7177 /* DismissDetailTransition.m in Sources */,
+				5C27086C1BC868BE007D2FE5 /* SAMCache.m in Sources */,
 				5C6371001BBC7336000B7177 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,8 +431,10 @@
 				5C6370E61BBC7164000B7177 /* PhotocopiaTests.m in Sources */,
 				5C6371011BBC7336000B7177 /* DetailViewController.m in Sources */,
 				5C6371261BBC77D1000B7177 /* PresentDetailTransition.m in Sources */,
+				5C27086D1BC868BE007D2FE5 /* SAMCache.m in Sources */,
 				5C63712B1BBC7BC6000B7177 /* MetadataView.m in Sources */,
 				5C6371061BBC7415000B7177 /* DismissDetailTransition.m in Sources */,
+				5C2708741BC869CB007D2FE5 /* SAMCache+Image.m in Sources */,
 				5C63711C1BBC7685000B7177 /* PhotoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,8 +448,10 @@
 				5C6370F11BBC7164000B7177 /* PhotocopiaUITests.m in Sources */,
 				5C6371021BBC7336000B7177 /* DetailViewController.m in Sources */,
 				5C6371271BBC77D1000B7177 /* PresentDetailTransition.m in Sources */,
+				5C27086E1BC868BE007D2FE5 /* SAMCache.m in Sources */,
 				5C63712C1BBC7BC6000B7177 /* MetadataView.m in Sources */,
 				5C6371071BBC7415000B7177 /* DismissDetailTransition.m in Sources */,
+				5C2708751BC869CB007D2FE5 /* SAMCache+Image.m in Sources */,
 				5C63711D1BBC7685000B7177 /* PhotoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
