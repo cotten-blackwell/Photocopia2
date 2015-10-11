@@ -1,25 +1,32 @@
 //
-//  DismissDetailTransition.m
+//  PresentDetailTransition.m
 //  Photocopia
 //
-//  Created by Cotten Blackwell on 10/11/15.
+//  Created by Cotten Blackwell on 10/9/15.
 //  Copyright © 2015 Cotten Blackwell. All rights reserved.
 //
 
-#import "DismissDetailTransition.h"
+#import "PresentDetailTransition.h"
 
-@implementation DismissDetailTransition
+@implementation PresentDetailTransition
 
 //TODO -- fix during AirPair session 0....
 //
 //-(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-//    UIViewController *detail = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+//    UIViewController *detail = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 //    UIView *containerView = [transitionContext containerView];
 //    
+//    detail.view.alpha = 0.0;
+//    
+//    CGRect frame = containerView.bounds;
+//    frame.origin.y += 20.0;
+//    frame.size.height -= 20.0;
+//    detail.view.frame = frame;
+//    [containerView addSubview:detail.view];
+//    
 //    [UIView animateWithDuration:0.3 animations:^{
-//        detail.view.alpha = 0.0;
+//        detail.view.alpha = 1.0;
 //    } completion:^(BOOL finished) {
-//        [detail.view removeFromSuperview];
 //        [transitionContext completeTransition:YES];
 //    }];
 //}
@@ -27,6 +34,6 @@
 //-(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
 //    return 0.3;
 //}
-//
+
 
 @end
