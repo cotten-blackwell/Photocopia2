@@ -461,7 +461,7 @@
 				TargetAttributes = {
 					5C6370C71BBC7164000B7177 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = VUWNME4SG3;
+						DevelopmentTeam = 2CQ5N8525F;
 					};
 					5C6370E01BBC7164000B7177 = {
 						CreatedOnToolsVersion = 7.0;
@@ -762,6 +762,7 @@
 			baseConfigurationReference = EF4A6DEC16CB1EC91DE79FC9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -783,6 +784,7 @@
 			baseConfigurationReference = 1023BE625EB99A2B19DFFF70 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",

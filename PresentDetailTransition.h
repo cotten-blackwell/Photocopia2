@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 //TODO -- fix during AirPair session 0....
-//@interface PresentDetailTransition : NSObject <UIViewControllerAnimatedTransitioning>
-@interface PresentDetailTransition : NSObject
+@interface PresentDetailTransition : NSObject <UIViewControllerAnimatedTransitioning>
+//@interface PresentDetailTransition : NSObject
 
 @end
 
