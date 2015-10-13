@@ -42,26 +42,29 @@
     self.imageView.frame = self.contentView.bounds;
 }
 
--(void)like {
+
+- (void)like:(id)sender {
     NSLog(@"Link: %@", self.photo[@"link"]);
     
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"];
-    NSString *urlString = [[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/media/%@/likes?access_token=%@", self.photo[@"id"], accessToken];
-    NSURL *url = [[NSURL alloc] initWithString:urlString];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSLog(@"Response:  %@", response);
-        NSLog(@"Data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self showLikeCompletion];
-        });
-    }];
-    [task resume];
+    UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
+    if ( longPress.state == UIGestureRecognizerStateEnded) {
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"];
+        NSString *urlString = [[NSString alloc] initWithFormat:@"https://api.instagram.com/v1/media/%@/likes?access_token=%@", self.photo[@"id"], accessToken];
+        NSURL *url = [[NSURL alloc] initWithString:urlString];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+        request.HTTPMethod = @"POST";
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self showLikeCompletion];
+            });
+        }];
+        [task resume];
+    }
 }
 
+
+- (void)showLikeCompletion {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Liked!" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
     [alert show];
     
@@ -71,5 +74,6 @@
         [alert dismissWithClickedButtonIndex:0 animated:YES];
     });
 }
+
 
 @end
