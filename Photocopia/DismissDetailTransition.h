@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //TODO -- fix during AirPair session 0....
-//@interface DismissDetailTransition : NSObject <UIViewControllerAnimatedTransitioning>
-@interface DismissDetailTransition : NSObject
+@interface DismissDetailTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end
