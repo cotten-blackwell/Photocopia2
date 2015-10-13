@@ -8,11 +8,8 @@
 
 #import "PhotoController.h"
 
-//#import <SAMCache/SAMCache.h>
-//didn't try CocoaPods this time, so just added the SAMCache files directly to this project
 #import "SAMCache.h"
 
-        
 @implementation PhotoController
 
 + (void)imageForPhoto:(NSDictionary *)photo size:(NSString *)size completion:(void(^)(UIImage *image))completion {

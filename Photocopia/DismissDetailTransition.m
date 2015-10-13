@@ -10,9 +10,7 @@
 
 @implementation DismissDetailTransition
 
-//TODO -- fix during AirPair session 0....
-
--(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *detail = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -23,9 +21,9 @@
     }];
 }
 
--(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.3;
 }
-
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation PhotoCell
 
--(void)setPhoto:(NSDictionary *)photo {
+- (void)setPhoto:(NSDictionary *)photo {
     _photo = photo;
     
     [PhotoController imageForPhoto:_photo size:@"thumbnail" completion:^(UIImage *image) {
@@ -19,24 +19,26 @@
     }];
 }
 
--(id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
     if (self) {
         self.imageView = [[UIImageView alloc] init];
+        self.imageView.backgroundColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
         
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(like)];
-        tap.numberOfTapsRequired = 2;
-        [self addGestureRecognizer:tap];
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(like:)];
+        longPress.minimumPressDuration = 1.0f;
+        [self addGestureRecognizer:longPress];
         
         [self.contentView addSubview:self.imageView];
     }
     return self;
 }
 
--(void)layoutSubviews {
+
+- (void)layoutSubviews {
     [super layoutSubviews];
     
-    //make pictures fill the entirety of each cell...
     self.imageView.frame = self.contentView.bounds;
 }
 
@@ -60,7 +62,6 @@
     [task resume];
 }
 
--(void)showLikeCompletion {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Liked!" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
     [alert show];
     

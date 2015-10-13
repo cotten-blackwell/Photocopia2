@@ -9,7 +9,6 @@
 #import "MetadataView.h"
 #import "PhotoController.h"
 
-//#import <SAMCategories/NSDate+SAMAdditions.h>
 #import "NSDate+SAMAdditions.h"
 
 @interface MetadataView ()

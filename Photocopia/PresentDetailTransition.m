@@ -10,7 +10,7 @@
 
 @implementation PresentDetailTransition
 
--(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *detail = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];
     
@@ -29,7 +29,8 @@
     }];
 }
 
--(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.3;
 }
 
