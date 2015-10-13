@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PhotosViewController.h"
+#import "Animator.h"
 
 #import <SimpleAuth/SimpleAuth.h>
 
