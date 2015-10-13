@@ -96,7 +96,9 @@
 		5C63712A1BBC7BC6000B7177 /* MetadataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6371291BBC7BC6000B7177 /* MetadataView.m */; settings = {ASSET_TAGS = (); }; };
 		5C63712B1BBC7BC6000B7177 /* MetadataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6371291BBC7BC6000B7177 /* MetadataView.m */; settings = {ASSET_TAGS = (); }; };
 		5C63712C1BBC7BC6000B7177 /* MetadataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6371291BBC7BC6000B7177 /* MetadataView.m */; settings = {ASSET_TAGS = (); }; };
-		5C6655711BCD5A850021A608 /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C66556F1BCD5A850021A608 /* Animator.m */; settings = {ASSET_TAGS = (); }; };
+		5C6655741BCD6CF90021A608 /* PresentDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6655731BCD6CF90021A608 /* PresentDetailTransition.m */; settings = {ASSET_TAGS = (); }; };
+		5C6655751BCD6CF90021A608 /* PresentDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6655731BCD6CF90021A608 /* PresentDetailTransition.m */; settings = {ASSET_TAGS = (); }; };
+		5C6655761BCD6CF90021A608 /* PresentDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6655731BCD6CF90021A608 /* PresentDetailTransition.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,8 +191,8 @@
 		5C63711F1BBC7712000B7177 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		5C6371281BBC7BC6000B7177 /* MetadataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetadataView.h; sourceTree = "<group>"; };
 		5C6371291BBC7BC6000B7177 /* MetadataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetadataView.m; sourceTree = "<group>"; };
-		5C66556F1BCD5A850021A608 /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
-		5C6655701BCD5A850021A608 /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		5C6655721BCD6CF90021A608 /* PresentDetailTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentDetailTransition.h; sourceTree = "<group>"; };
+		5C6655731BCD6CF90021A608 /* PresentDetailTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentDetailTransition.m; sourceTree = "<group>"; };
 		5CC0E1A41BC84142008151CD /* libSimpleAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSimpleAuth.a; path = "Pods/../build/Debug-iphoneos/libSimpleAuth.a"; sourceTree = "<group>"; };
 		9F8ECC297A5BBF8157055226 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4A6DEC16CB1EC91DE79FC9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -327,8 +329,6 @@
 		5C6370CA1BBC7164000B7177 /* Photocopia */ = {
 			isa = PBXGroup;
 			children = (
-				5C66556F1BCD5A850021A608 /* Animator.m */,
-				5C6655701BCD5A850021A608 /* Animator.h */,
 				5C6370CE1BBC7164000B7177 /* AppDelegate.h */,
 				5C6370CF1BBC7164000B7177 /* AppDelegate.m */,
 				5C6370D71BBC7164000B7177 /* Assets.xcassets */,
@@ -345,6 +345,8 @@
 				5C63711A1BBC7685000B7177 /* PhotoController.m */,
 				5C63711E1BBC7712000B7177 /* PhotosViewController.h */,
 				5C63711F1BBC7712000B7177 /* PhotosViewController.m */,
+				5C6655721BCD6CF90021A608 /* PresentDetailTransition.h */,
+				5C6655731BCD6CF90021A608 /* PresentDetailTransition.m */,
 				5C6370CB1BBC7164000B7177 /* Supporting Files */,
 			);
 			path = Photocopia;
@@ -568,7 +570,6 @@
 				5C27090D1BC86C7D007D2FE5 /* NSURL+SAMAdditions.m in Sources */,
 				5C0F71D01BCB16AF0012D43B /* DismissDetailTransition.m in Sources */,
 				5C63711B1BBC7685000B7177 /* PhotoController.m in Sources */,
-				5C6655711BCD5A850021A608 /* Animator.m in Sources */,
 				5C2708F81BC86C7D007D2FE5 /* NSArray+SAMAdditions.m in Sources */,
 				5C2709041BC86C7D007D2FE5 /* NSNumber+SAMAdditions.m in Sources */,
 				5C6371201BBC7712000B7177 /* PhotosViewController.m in Sources */,
@@ -584,6 +585,7 @@
 				5C27091F1BC86C7D007D2FE5 /* UIDevice+SAMAdditions.m in Sources */,
 				5C27090A1BC86C7D007D2FE5 /* NSString+SAMAdditions.m in Sources */,
 				5C27086C1BC868BE007D2FE5 /* SAMCache.m in Sources */,
+				5C6655741BCD6CF90021A608 /* PresentDetailTransition.m in Sources */,
 				5C2709251BC86C7D007D2FE5 /* UIScrollView+SAMAdditions.m in Sources */,
 				5C2709161BC86C7D007D2FE5 /* UIApplication+SAMAdditions.m in Sources */,
 				5C27092B1BC86C7D007D2FE5 /* UIViewController+SAMAdditions.m in Sources */,
@@ -618,6 +620,7 @@
 				5C27092C1BC86C7D007D2FE5 /* UIViewController+SAMAdditions.m in Sources */,
 				5C2708741BC869CB007D2FE5 /* SAMCache+Image.m in Sources */,
 				5C2709291BC86C7D007D2FE5 /* UIView+SAMAdditions.m in Sources */,
+				5C6655751BCD6CF90021A608 /* PresentDetailTransition.m in Sources */,
 				5C27090B1BC86C7D007D2FE5 /* NSString+SAMAdditions.m in Sources */,
 				5C63711C1BBC7685000B7177 /* PhotoController.m in Sources */,
 				5C2709201BC86C7D007D2FE5 /* UIDevice+SAMAdditions.m in Sources */,
@@ -651,6 +654,7 @@
 				5C27092D1BC86C7D007D2FE5 /* UIViewController+SAMAdditions.m in Sources */,
 				5C2708751BC869CB007D2FE5 /* SAMCache+Image.m in Sources */,
 				5C27092A1BC86C7D007D2FE5 /* UIView+SAMAdditions.m in Sources */,
+				5C6655761BCD6CF90021A608 /* PresentDetailTransition.m in Sources */,
 				5C27090C1BC86C7D007D2FE5 /* NSString+SAMAdditions.m in Sources */,
 				5C63711D1BBC7685000B7177 /* PhotoController.m in Sources */,
 				5C2709211BC86C7D007D2FE5 /* UIDevice+SAMAdditions.m in Sources */,
