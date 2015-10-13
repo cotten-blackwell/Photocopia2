@@ -102,7 +102,9 @@
     return cell;
 }
 
--(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+//TODO --didSelectItem seems like it's lagging -- doesn't show DetailViewController for tapped photo until
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *photo = self.photos[indexPath.row];
     DetailViewController *viewController = [[DetailViewController alloc] init];
     viewController.modalPresentationStyle = UIModalPresentationCustom;
